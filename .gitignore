@@ -43,3 +43,6 @@ x64/
 # NuGet Packages Directory
 packages
 
+# Node.js modules directory
+node_modules/
+
