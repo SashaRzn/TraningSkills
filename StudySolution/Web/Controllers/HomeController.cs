@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using Web.Models;
 
 namespace Web.Controllers
 {
@@ -6,7 +8,15 @@ namespace Web.Controllers
 	{
 		public ActionResult Index()
 		{
-			return Content("Сайт находится в разработке. ©bacdob");
-		}
+			List<Book> books = new List<Book>();
+			using (LibraryContext context = new LibraryContext())
+			{				
+				foreach (var item in context.Books)
+				{
+					books.Add(item);
+				}
+			}
+			return View(books);			
+		}		
 	}
 }
