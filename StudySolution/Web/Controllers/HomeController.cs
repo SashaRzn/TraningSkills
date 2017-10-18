@@ -6,7 +6,7 @@ namespace Web.Controllers
 	{
 		public ActionResult Index()
 		{
-			return Content("Сайт находится в разработке. ©bacdob");
+			return Content("Сайт находится в разработке. ©bakdob");
 		}
 	}
 }
